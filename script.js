@@ -1,5 +1,6 @@
+const cover = document.getElementById('cover');
+
 const handleCoverSwipe = () => {
-    const cover = document.getElementById('cover');
     const dragDotCover = document.getElementById('dragdot-cover');
     const dragArrow = document.getElementById('dragarrow');
 
@@ -19,3 +20,27 @@ cover.addEventListener('transitionend', () => {
         cover.style.transform = `translateY(-100%)`;
     }
 });
+
+const handleAboutMe = () => {
+    const aboutMeLink = document.getElementById('aboutme-link');
+    const projectsLink = document.getElementById('projects-link');
+    const aboutMe = document.getElementById('about-me');
+    const project1 = document.getElementById('project1');
+
+    aboutMeLink.style.textDecoration = `underline`;
+    projectsLink.style.textDecoration = `none`;
+    aboutMe.style.zIndex = `200`;
+    project1.style.zIndex = `150`;
+};
+
+const handleProjects = () => {
+    const aboutMeLink = document.getElementById('aboutme-link');
+    const projectsLink = document.getElementById('projects-link');
+    const aboutMe = document.getElementById('about-me');
+    const project1 = document.getElementById('project1');
+
+    aboutMeLink.style.textDecoration = `none`;
+    projectsLink.style.textDecoration = `underline`;
+    aboutMe.style.zIndex = `150`;
+    project1.style.zIndex = `200`;
+};
